@@ -1,5 +1,5 @@
 class AlifTask:
-    
+
     def __init__(self, fileName, operationType):
         self.fileName = fileName
         self.operationType = operationType
@@ -20,6 +20,9 @@ class AlifTask:
                 r_positive.write(str(result) + "\n")
             elif result < 0:
                 r_negative.write(str(result) + "\n")
+        f.close()
+        r_negative.close()
+        r_positive.close()
 
 
 makeOperation = AlifTask(input("File Name: "), input("Operation Type: "))
