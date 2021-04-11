@@ -7,7 +7,8 @@ class AlifTask:
         f = open(self.fileName)
         r_negative = open("negative_results.txt", "w")
         r_positive = open("positive_results.txt", "w")
-
+        negative = ""
+        positive = ""
         for x in f:
             try:
                 result = eval(x.replace(" ", self.operationType))
@@ -15,10 +16,12 @@ class AlifTask:
                 continue
 
             if result > 0:
-                r_positive.write(str(result) + "\n")
+                positive += str(result) + "\n"
             elif result < 0:
-                r_negative.write(str(result) + "\n")
+                negative += str(result) + "\n"
 
+        r_negative.write(negative)
+        r_positive.write(positive)
         f.close()
         r_negative.close()
         r_positive.close()
