@@ -20,4 +20,4 @@ The file is specified in this format
 
 Operations can be division, multiplication, addition and subtraction
 
-The console program accepts an operation for every twщ numbers for each line and outputs the result into two files: Positive and Negative
+The console program applies the operation for every two numbers for each line and outputs the result into two files: Positive and Negative
